@@ -27,12 +27,12 @@ namespace Bananaornot.Controllers
         public async Task<BananaResult> Get(string url)
         {
             var hasBanana = await ContainsBanana(url);
-            var hasNoBanana = await ContainsNoBanana(url);
+            //var hasNoBanana = await ContainsNoBanana(url);
 
             return new BananaResult
             {
                 HasBanana = hasBanana,
-                HasNoBanana = hasNoBanana
+                //HasNoBanana = hasNoBanana
             };
         }
 
@@ -76,7 +76,7 @@ namespace Bananaornot.Controllers
         public class BananaResult
         {
             public bool HasBanana { get; set; }
-            public bool HasNoBanana { get; set; }
+            //public bool HasNoBanana { get; set; }
         }
     }
 }

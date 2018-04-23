@@ -42,7 +42,7 @@
           </div>
           <div v-if="results">
             <h2><i class="fa"  v-bind:class="{ 'fa-check': results.hasBanana, 'fa-times': !results.hasBanana }"></i> Banana</h2>
-            <h2><i class="fa"  v-bind:class="{ 'fa-check': results.hasNoBanana, 'fa-times': !results.hasNoBanana }"></i> No Banana</h2>
+            <!-- <h2><i class="fa"  v-bind:class="{ 'fa-check': results.hasNoBanana, 'fa-times': !results.hasNoBanana }"></i> No Banana</h2> -->
           </div>
           <br />
           <img :src="url" style="max-width: 100%;" />
@@ -72,7 +72,7 @@
                   this.waiting = false;
                   if (err) {
                     this.results = null;
-                    alert("Failed: ensure the link is a valid image under 4 MB.");
+                    alert("Failed: Provided link is invalid image.");
                   } else {
                     this.results = res.body;
                   }
